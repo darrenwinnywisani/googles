@@ -1,0 +1,30 @@
+
+  <ion-header>
+
+      <ion-navbar color="primary">
+        <h1><ion-title>login</ion-title></h1>
+      </ion-navbar>
+    
+    </ion-header>
+  
+  <ion-content padding class="imgs" >
+          <ion-item>
+              <ion-icon name="at" item-start></ion-icon>
+              <ion-label stacked>Email</ion-label>
+            <ion-input  type="email"  [(ngModel)]="email"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-icon name="lock" item-start></ion-icon>
+              <ion-label stacked>Password</ion-label>
+            <ion-input type="password"  [(ngModel)]="password"></ion-input>
+          </ion-item>
+         
+          <button ion-button block round (click)="signIn()">Sign In</button>
+          <button ion-button block round clear  (click)="goToSignUp()">Create Account</button>
+          <button ion-button block round clear  (click)="forgetPassword()">reset password</button>
+          <button ion-button block  round clear (click)="Google()" ><ion-icon name="logo-google"> Login with google</ion-icon> </button>
+  
+     
+  
+  </ion-content>

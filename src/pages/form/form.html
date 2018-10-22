@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <h1><ion-title>Create Account</ion-title></h1>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="logout()">
+              <ion-icon name="log-out"></ion-icon>
+            </button>
+      </ion-buttons>
+    </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding class="imgs">
+  
+        <div class="profile-image">
+              <h1><img class="circle-pic" src="{{imgurl}}">
+            
+              <button ion-button clear round style="float:middle" (click)="image()" > <ion-icon name="image"></ion-icon></button>
+            </h1>
+            </div>
+          
+
+              <ion-list>
+                 
+                  <ion-item (click)="updateName()">
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col col-6>Name</ion-col>
+                          <ion-col col-6 *ngIf="userProfile?.firstName || userProfile?.lastName">
+                          {{userProfile?.firstName}} {{userProfile?.lastName}}
+                        </ion-col>
+                        <ion-col col-6 *ngIf="!userProfile?.firstName || !userProfile?.lastName">
+                
+                          <span>Tap here to edit</span>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                  </ion-item>
+                  
+                      
+                 
+                </ion-list>
+   
+        </ion-content>
