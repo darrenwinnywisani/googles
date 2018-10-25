@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar color="primary">
-      <h1><ion-title>Create Account</ion-title></h1>
+      <h1><ion-title text-center>Create Account</ion-title></h1>
       <ion-buttons end>
           <button ion-button icon-only (click)="logout()">
               <ion-icon name="log-out"></ion-icon>
@@ -11,8 +11,8 @@
     </ion-header>
     
     
-    <ion-content padding class="imgs">
-  
+    <ion-content padding class="content">
+        <div class="container">
         <div class="profile-image">
               <h1><img class="circle-pic" src="{{imgurl}}">
             
@@ -28,11 +28,13 @@
                       <ion-row>
                         <ion-col col-6>Name</ion-col>
                           <ion-col col-6 *ngIf="userProfile?.firstName || userProfile?.lastName">
-                          {{userProfile?.firstName}} {{userProfile?.lastName}}
+                          {{userProfile?.firstName}}
+
+                          <!-- {{userProfile?.lastName}} -->
                         </ion-col>
                         <ion-col col-6 *ngIf="!userProfile?.firstName || !userProfile?.lastName">
                 
-                          <span>Tap here to edit</span>
+                          <span>Tap here </span>
                         </ion-col>
                       </ion-row>
                     </ion-grid>
@@ -41,5 +43,5 @@
                       
                  
                 </ion-list>
-   
+   </div>
         </ion-content>

@@ -29,9 +29,9 @@ constructor(public navCtrl: NavController,
 
    }
 
-ionViewDidLoad() {
-  console.log('ionViewDidLoad LoginPage');
-}
+// ionViewDidLoad() {
+//   console.log('ionViewDidLoad LoginPage');
+// }
 goToSignUp():void {
   this.navCtrl.push('SignUpPage');
 }

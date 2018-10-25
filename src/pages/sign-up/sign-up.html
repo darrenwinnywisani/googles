@@ -1,28 +1,45 @@
 
-<ion-header>
+<!-- <ion-header>
 
     <ion-navbar color="primary">
-      <h1><ion-title>signup</ion-title></h1>
+      <h1><ion-title text-center>signup</ion-title></h1>
       
     </ion-navbar>
   
-  </ion-header>>
+  </ion-header> -->
   
-    <ion-content padding class="imgs" >
-       
+    <ion-content padding class="content" >
+        <div class="container">
+
+            <div class="app-name">
+                <h2>Create Account</h2>
+            </div>
+            <ion-item>
+            
+                <ion-label stacked>Name</ion-label>
+              <ion-input type="name"  [(ngModel)]="name"></ion-input>
+            </ion-item>
+            <ion-item>
+            
+                <ion-label stacked>Surname</ion-label>
+              <ion-input type="surname"  [(ngModel)]="surname"></ion-input>
+            </ion-item>
         <ion-item>
-            <ion-icon name="at" item-start></ion-icon>
+            
             <ion-label stacked>Email</ion-label>
           <ion-input type="email"  [(ngModel)]="email"></ion-input>
         </ion-item>
 
        
         <ion-item>
-            <ion-icon name="lock" item-start></ion-icon>
+           
             <ion-label  stacked>Password</ion-label>
           <ion-input  type="password"  [(ngModel)]="password"></ion-input>
         </ion-item>
        
-        <button ion-button block round  (click)="signUp()">Sign Up</button>
-       
+        <button ion-button block round color="primary"  (click)="signUp()">Sign Up</button>
+        <div  style="text-align:center" padding>
+            <p style="color:black" class="p">Or, <a style="color:blue"(click)="gotoLogIn()">Log in</a></p>
+        </div>
+      </div>
     </ion-content>

@@ -1,30 +1,35 @@
 
-  <ion-header>
+  <!-- <ion-header>
 
       <ion-navbar color="primary">
         <h1><ion-title>login</ion-title></h1>
       </ion-navbar>
     
-    </ion-header>
+    </ion-header> -->
   
-  <ion-content padding class="imgs" >
+  <ion-content padding class="content" >
+      <div class="container">
           <ion-item>
-              <ion-icon name="at" item-start></ion-icon>
+              <!-- <ion-icon name="at" item-start></ion-icon> -->
               <ion-label stacked>Email</ion-label>
             <ion-input  type="email"  [(ngModel)]="email"></ion-input>
           </ion-item>
   
           <ion-item>
-              <ion-icon name="lock" item-start></ion-icon>
+              <!-- <ion-icon name="lock" item-start></ion-icon> -->
               <ion-label stacked>Password</ion-label>
             <ion-input type="password"  [(ngModel)]="password"></ion-input>
           </ion-item>
          
           <button ion-button block round (click)="signIn()">Sign In</button>
-          <button ion-button block round clear  (click)="goToSignUp()">Create Account</button>
-          <button ion-button block round clear  (click)="forgetPassword()">reset password</button>
-          <button ion-button block  round clear (click)="Google()" ><ion-icon name="logo-google"> Login with google</ion-icon> </button>
+          <!-- <button ion-button block round clear  (click)="goToSignUp()">Create Account</button>
+          <button ion-button block round clear  (click)="forgetPassword()">reset password</button> -->
+        
   
-     
-  
-  </ion-content>
+          <div  style="text-align:center" padding>
+            <p style="color:black">Forgot Password?<a style="color:blue" (click)="forgetPassword()">Reset</a></p>
+            <p style="color:black" class="p">Already have an account?<a style="color:blue"(click)="goToSignUp()">Register</a></p>
+        </div>
+        <button ion-button block  round clear (click)="Google()" ><ion-icon name="logo-google"> Login with google</ion-icon> </button>
+  </div>
+      </ion-content>

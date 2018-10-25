@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 
 import { Component } from '@angular/core';
 import {Alert,AlertController,Loading,LoadingController,
@@ -18,7 +19,9 @@ password:string;
 
   constructor(public navCtrl: NavController, private loadingCtrl:LoadingController, private alertCtrl:AlertController, private authProvider:AuthProvider) {
   }
-
+  gotoLogIn(){
+    this.navCtrl.push(LoginPage);
+  }
   goToSignUp():void {
     this.navCtrl.push('SignUpPage');
   }

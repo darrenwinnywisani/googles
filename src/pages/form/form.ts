@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { ImgHandlerProvider } from './../../providers/img-handler/img-handler';
 import { AuthProvider } from './../../providers/auth/auth';
 import { Component } from '@angular/core';
@@ -127,7 +128,7 @@ password:string;
           }
        
         logout(){
-          this.navCtrl.push('LoginPage');
+          this.navCtrl.push(LoginPage);
         }
   
   
